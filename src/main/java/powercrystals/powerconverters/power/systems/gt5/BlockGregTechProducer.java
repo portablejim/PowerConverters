@@ -21,7 +21,7 @@ public class BlockGregTechProducer extends BlockPowerConverter {
 
     @Override
     public TileEntity createTileEntity(World world, int metadata) {
-        return new TileEntityGregTechConsumer(metadata);
+        return new TileEntityGregTechProducer(metadata);
     }
 
     @Override
