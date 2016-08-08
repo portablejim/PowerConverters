@@ -29,7 +29,7 @@ public class ItemBlockIndustrialCraft extends ItemBlock {
     @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         //noinspection unchecked
-        par3List.add(EnumChatFormatting.BLUE + (par1ItemStack.getItemDamage() % 2 == 0 ? "Max EU in: " : "Max EU out: ") + PowerIndustrialcraft.VOLTAGE_VALUES[par1ItemStack.getItemDamage() / 2] + (par1ItemStack.getItemDamage() >= 8 ? "+" : ""));
+        par3List.add(EnumChatFormatting.BLUE + (par1ItemStack.getItemDamage() % 2 == 0 ? "Max EU in: " : "Max EU out: ") + PowerIndustrialcraft.VOLTAGE_VALUES[par1ItemStack.getItemDamage() / 2]);
     }
 
     @Override
