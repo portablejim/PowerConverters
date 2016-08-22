@@ -21,10 +21,6 @@ repositories {
 		name = "ic2"
 		url = "http://maven.ic2.player.to/"
 	}
-	maven {
-		name = "calclavia"
-		url = "http://calclavia.com/maven/"
-	}
 
     maven{
         name "Waila Mobius Repo"
@@ -66,7 +62,6 @@ archivesBaseName = "PowerConverters"
 dependencies {
 	compile "net.industrial-craft:industrialcraft-2:${config.ic2_version}:api"
 	compile "com.mod-buildcraft:buildcraft:${config.buildcraft_version}:dev"
-	compile "dev.calclavia.resonantengine:resonant-engine:${config.resonantengine_version}:dev"
     compile "mcp.mobius.waila:Waila:${config.waila_version}:dev"
 }
 
