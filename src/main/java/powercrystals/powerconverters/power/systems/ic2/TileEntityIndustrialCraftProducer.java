@@ -115,7 +115,12 @@ public class TileEntityIndustrialCraftProducer extends TileEntityEnergyProducer<
 
     @Override
     public int getSourceTier() {
-        return _voltageIndex;
+		// IC2's Api defines 1=LV, 2=MV, 3=HV, 4=EV ...
+		// so we have to do the +1, as voltageIndex is an array
+		// which starts at 0 for LV.
+		//
+		// See: ic2\api\energy\tile\IEnergySource.java for more information.
+        return (_voltageIndex+1);
     }
 
     @Override

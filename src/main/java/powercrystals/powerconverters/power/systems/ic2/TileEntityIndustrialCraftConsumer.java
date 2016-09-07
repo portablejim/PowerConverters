@@ -77,7 +77,12 @@ public class TileEntityIndustrialCraftConsumer extends TileEntityEnergyConsumer<
 
     @Override
     public int getSinkTier() {
-        return this._voltageIndex;
+		// IC2's Api defines 1=LV, 2=MV, 3=HV, 4=EV ...
+		// so we have to do the +1, as voltageIndex is an array
+		// which starts at 0 for LV.
+		//
+		// See: ic2\api\energy\tile\IEnergySink.java for more information.
+        return (this._voltageIndex + 1);
     }
 
     @Override
