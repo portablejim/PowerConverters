@@ -30,7 +30,6 @@ import powercrystals.powerconverters.common.ItemBlockPowerConverterCommon;
 import powercrystals.powerconverters.common.TileEntityCharger;
 import powercrystals.powerconverters.common.TileEntityEnergyBridge;
 import powercrystals.powerconverters.crafting.RecipeProvider;
-import powercrystals.powerconverters.crafting.mods.RecipeMFFS;
 import powercrystals.powerconverters.crafting.mods.RecipeGregTech5;
 import powercrystals.powerconverters.crafting.mods.RecipeBuildCraft;
 import powercrystals.powerconverters.crafting.mods.RecipeEnderIO;
@@ -48,7 +47,6 @@ import powercrystals.powerconverters.power.systems.PowerIndustrialcraft;
 import powercrystals.powerconverters.power.systems.PowerRedstoneFlux;
 import powercrystals.powerconverters.power.systems.PowerSteam;
 import powercrystals.powerconverters.power.systems.PowerGregTech5;
-import powercrystals.powerconverters.power.systems.PowerFortron;
 
 import java.io.File;
 import java.io.InputStream;
@@ -56,7 +54,7 @@ import java.util.HashSet;
 import java.util.Properties;
 import java.util.Set;
 
-@Mod(modid = PowerConverterCore.modId, name = PowerConverterCore.modName, dependencies = "after:BuildCraft|Energy;after:factorization;after:IC2;after:Railcraft;after:ThermalExpansion;after:gregtech;after:MFFS")
+@Mod(modid = PowerConverterCore.modId, name = PowerConverterCore.modName, dependencies = "after:BuildCraft|Energy;after:factorization;after:IC2;after:Railcraft;after:ThermalExpansion;after:gregtech")
 public final class PowerConverterCore {
     public static final String modId = "PowerConverters";
     public static final String modName = "Power Converters";
@@ -130,6 +128,8 @@ public final class PowerConverterCore {
         logger.info("-------------------------[PowerConverters][STEAM]-------------------------");
         logger.info("Default steam ratios, while based on standards, will create infinite energy loops");
         logger.info("To prevent over powered infinite energy, use a steam throttle values of less than 5");
+        logger.info("+++++++++++++++++++++++++[PowerConverters][NOTICE]+++++++++++++++++++++++++");
+        logger.info("++++++++++++++++++++++++[CUSTOM_BUILD_BY_ultrasn0w]++++++++++++++++++++++++");
         logger.info("+++++++++++++++++++++++++[PowerConverters][NOTICE]+++++++++++++++++++++++++");
 
         PowerSystemManager.getInstance().registerCommonRecipes();
@@ -211,12 +211,12 @@ public final class PowerConverterCore {
                 }
             }
         }
-        if(Loader.isModLoaded("MFFS")){
+/*        if(Loader.isModLoaded("MFFS")){
         	enabledRecipes.add(new RecipeMFFS());
         	if(manager.getPowerSystemByName(PowerFortron.id) == null) {
         		manager.registerPowerSystem(new PowerFortron());
         	}
-        }
+        } */
         
     }
 
