@@ -32,7 +32,7 @@ public class RecipeBuildCraft extends RecipeProvider {
             Item fluid = GameRegistry.findItem("BuildCraft|Transport", "item.buildcraftPipe.pipefluidsgold");
 
             Block chest = GameRegistry.findBlock("BuildCraft|Transport", "filteredBufferBlock");
-            Block engine = GameRegistry.findBlock("BuildCraft|Energy", "engineBlock");
+            Block engine = GameRegistry.findBlock("BuildCraft|Core", "engineBlock");
             Block pump = GameRegistry.findBlock("BuildCraft|Factory", "pumpBlock");
 
             if (enableRecipes) {
